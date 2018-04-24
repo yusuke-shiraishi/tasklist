@@ -8,11 +8,11 @@
         <h2>id : ${tasks.id} のメッセージ詳細ページ</h2>
 
         <p>タイトル：<c:out value="${tasks.title}" /></p>
-        <p>メッセージ：<c:out value="${tasks.content}" /></p>
+        <p>タスク：<c:out value="${tasks.content}" /></p>
         <p>作成日時：<fmt:formatDate value="${tasks.created_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
         <p>更新日時：<fmt:formatDate value="${tasks.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
 
-        <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
-
+		<p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
+		<p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">このメッセージを編集する</a></p>
     </c:param>
-</c:import>tml>
+</c:import>
